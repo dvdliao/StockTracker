@@ -1,0 +1,13 @@
+
+#!/bin/bash
+if [ $1 ]; then
+	if [ $1 = "-r" ]; then
+		echo "Syncing Server -> Local";
+		rsync -rczv --filter=':- .gitignore' --exclude '.git' -e "ssh -p 22 -o ConnectTimeout=3" root@192.241.222.56:/root/crawler ./ | grep -v "delta-transmission\|sync\|uptodate\|connection\|incremental\|matches=\|total size is\|bytes/sec"
+	fi
+else
+	echo "Syncing Local -> Server";
+	rsync -rczv --filter=':- .gitignore' --exclude '.git' -e "ssh -p 22 -o ConnectTimeout=3" ./ root@192.241.222.56:/root/crawler | grep -v "delta-transmission\|sync\|uptodate\|connection\|incremental\|matches=\|total size is\|bytes/sec"
+fi
+
+echo "Done"

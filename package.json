@@ -1,0 +1,25 @@
+{
+  "name": "stock-tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "async": "^2.0.0-rc.3",
+    "cassandra-driver": "^3.0.2",
+    "dotenv": "^2.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "supervisor --debug server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dvdliao/StockTracker.git"
+  },
+  "author": "David Liao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dvdliao/StockTracker/issues"
+  },
+  "homepage": "https://github.com/dvdliao/StockTracker#readme"
+}
