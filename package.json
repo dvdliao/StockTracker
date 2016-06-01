@@ -6,7 +6,8 @@
   "dependencies": {
     "async": "^2.0.0-rc.3",
     "cassandra-driver": "^3.0.2",
-    "dotenv": "^2.0.0"
+    "dotenv": "^2.0.0",
+    "robinhood": "^0.3.1"
   },
   "devDependencies": {},
   "scripts": {
